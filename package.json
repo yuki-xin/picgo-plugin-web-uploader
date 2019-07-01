@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-web-uploader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "自定义Web图床",
   "main": "src/index.js",
   "publishConfig": {
