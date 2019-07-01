@@ -11,6 +11,8 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 - url: 图床上传API地址
 - paramName: POST参数名
 - jsonPath: 图片URL所在返回值的JsonPath(eg:data.url)
+- customHeader: 自定义请求头 标准JSON(eg: {"key":"value"}
+- customBody: 自定义Body 标准JSON(eg: {"key":"value"})
 
 ### 服务端配置
 
@@ -70,7 +72,7 @@ services:
 
 ### 服务端测试
 - Plugin配置
-![](https://i.loli.net/2019/02/27/5c76460789850.png)
+![](https://img.yuki.xin/2019/07/01/f2c7c902b2d02e1ad9bdcb929a83dd0d.png)
 
 - Rest请求
 ![](https://i.loli.net/2019/02/27/5c76458ce03e7.png)
