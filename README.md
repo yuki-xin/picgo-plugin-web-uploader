@@ -23,7 +23,6 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 version: '3'
 services:
   pic-uploader:
-    build: .
     image: zqiannnn/pic-uploader:1.0
     ports:
       - 8080:80
