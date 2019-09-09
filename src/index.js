@@ -53,7 +53,7 @@ module.exports = (ctx) => {
     } catch (err) {
       ctx.emit('notification', {
         title: '上传失败',
-        body: '请检查服务端或配置'
+        body: JSON.stringify(err)
       })
     }
   }
