@@ -1,18 +1,24 @@
-# picgo-plugin-web-uploader
+# picgo-plugin-halo-blog-uploader
 
 plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
+from [PicGo-WebUploader](https://github.com/yuki-xin/picgo-plugin-web-uploader)
 - 自定义Web图床上传
+- 上传前登录
 
 ## 使用
 
 ### 图床配置
 
 - url: 图床上传API地址
+- login: 登录 url 地址
 - paramName: POST参数名
 - jsonPath: 图片URL所在返回值的JsonPath(eg:data.url)
 - customHeader: 自定义请求头 标准JSON(eg: {"key":"value"}
 - customBody: 自定义Body 标准JSON(eg: {"key":"value"})
+- twoFactorToken: 两步认证的 token
+- username: 登录要使用的用户名
+- password: 登录使用的密码
 
 ### 服务端配置
 

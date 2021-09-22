@@ -1,7 +1,7 @@
 {
-  "name": "picgo-plugin-web-uploader",
-  "version": "1.1.0",
-  "description": "自定义Web图床",
+  "name": "picgo-plugin-halo-blog-uploader",
+  "version": "0.1.0",
+  "description": "添加了验证登录的 Web 上传器",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
@@ -18,7 +18,7 @@
     "picgo-gui-plugin",
     "picgo-plugin"
   ],
-  "author": "ZQian",
+  "author": "zsb514",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.0.1",
@@ -27,6 +27,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
-    "@varnxy/logger": "^1.1.2"
+    "notp": "^2.0.3",
+    "thirty-two": "^1.0.2"
   }
 }
