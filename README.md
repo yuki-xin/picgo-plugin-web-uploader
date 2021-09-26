@@ -19,6 +19,10 @@ forked from [PicGo-WebUploader](https://github.com/yuki-xin/picgo-plugin-web-upl
 - 上传前登录
 - 两步认证
 
+## 本地安装
+1. 下载代码到本地
+2. 使用 PicGo 的导入本地插件功能导入
+
 ## 使用
 
 ### 图床配置
