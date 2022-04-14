@@ -26,8 +26,11 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "notp": "^2.0.3",
+    "eslint-plugin-standard": "^3.1.0"
+  },
+  "dependencies": {
+    "@1password/connect": "^1.0.5",
+    "@types/notp": "^2.0.2",
     "thirty-two": "^1.0.2"
   }
 }

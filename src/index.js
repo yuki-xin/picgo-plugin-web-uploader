@@ -1,5 +1,6 @@
 const notp = require('notp')
 const base32 = require('thirty-two')
+const onepasswd = require('@1password/connect')
 
 module.exports = (ctx) => {
   const register = () => {
@@ -139,6 +140,26 @@ module.exports = (ctx) => {
     }
     ctx.log.info("登录成功~！" + body.data.access_token)
     return body.data.access_token
+  }
+
+  const require1Password = async (url, token, itemName, itemKeyMapper) => {
+    const op = onepasswd.OnePasswordConnect({
+      serverURL: url,
+      token: token,
+      keepAlive: true
+    });
+    let allVaults = await op.listVaults();
+    const namedItem = await op.getItemByTitle(allVaults[0].id, itemName);
+    const loginData = namedItem.fields.reduce((t, i) => {
+      t[i.label] = i.value;
+      return t;
+    }, {})
+    let twoFactorCode = notp.totp.gen(base32.decode(loginData[itemKeyMapper["TOTP"]]))
+    return {
+      username: itemKeyMapper["username"],
+      password: itemKeyMapper["password"],
+      twoFactorCode: twoFactorCode
+    }
   }
 
   const config = ctx => {
